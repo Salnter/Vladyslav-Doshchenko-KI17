@@ -13,7 +13,6 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
@@ -66,7 +65,7 @@ var
   cnt,i:integer;
   s:string;
 begin
-  s:=Utf8ToAnsi(Memo.Text);
+  s:=Utf8ToAnsi(Edit1.Text);
    cnt:=0;
   for i:=1 to length(s) do
     if s[i] in ['e','u','i','o','a','E','U','I','O','A','ÿ','ß','ó','Ó','å','Å','¯',#178,#179,'¿','à','À','î','Î','º','ª','è','È','þ','Þ','û','Û','ý','Ý','¸','¨']
@@ -78,7 +77,7 @@ procedure TForm1.Button4Click(Sender: TObject);
  var
    t:string;
 begin
-  t:=Utf8ToAnsi(Memo.Text);
+  t:=Utf8ToAnsi(Edit1.Text);
   If Semonenko(WideUpperCase(Probel(t)))= 1 then
   Galery.Show
   else Galery_2.Show;

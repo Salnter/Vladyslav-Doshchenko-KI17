@@ -82,6 +82,7 @@
         <Filename Value="form5.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Galery"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Form5"/>
       </Unit7>
@@ -89,6 +90,7 @@
         <Filename Value="form5_negative.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Galery_2"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="form5_negative"/>
       </Unit8>
