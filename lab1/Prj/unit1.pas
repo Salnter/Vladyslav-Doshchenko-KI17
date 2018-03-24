@@ -9,6 +9,7 @@ uses
   ExtCtrls, Delete_prb, golos, Form5, Form5_negative;
 
 type
+  {$R *.lfm}
 
   { TForm1 }
 
@@ -16,11 +17,9 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
-    Edit1: TEdit;
     Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
-    Label3: TLabel;
     Memo: TMemo;
     Memo1: TMemo;
     procedure Button1Click(Sender: TObject);
@@ -41,9 +40,6 @@ var
 
 implementation
 
-{$R *.lfm}
-
-{ TForm1 }
 
 procedure TForm1.Label1Click(Sender: TObject);
 begin
@@ -52,12 +48,11 @@ end;
 
 procedure TForm1.MemoChange(Sender: TObject);
 begin
-  Memo.ReadOnly:=True;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  Label1.Caption:= DateToStr(Date);
+  Memo.Text:= DateToStr(Date);
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
@@ -65,7 +60,7 @@ var
   cnt,i:integer;
   s:string;
 begin
-  s:=Utf8ToAnsi(Edit1.Text);
+  s:=Utf8ToAnsi(Memo.Text);
    cnt:=0;
   for i:=1 to length(s) do
     if s[i] in ['e','u','i','o','a','E','U','I','O','A','ÿ','ß','ó','Ó','å','Å','¯',#178,#179,'¿','à','À','î','Î','º','ª','è','È','þ','Þ','û','Û','ý','Ý','¸','¨']
@@ -77,7 +72,7 @@ procedure TForm1.Button4Click(Sender: TObject);
  var
    t:string;
 begin
-  t:=Utf8ToAnsi(Edit1.Text);
+  t:=Utf8ToAnsi(Memo.Text);
   If Semonenko(WideUpperCase(Probel(t)))= 1 then
   Galery.Show
   else Galery_2.Show;
@@ -89,8 +84,7 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-Memo.Text:=Edit1.Text;
-Edit1.Clear;
+Memo.Text:=Memo.Text;
 end;
 
 end.

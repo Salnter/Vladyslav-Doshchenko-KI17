@@ -9,8 +9,13 @@ var
 s1:string;
 begin
 s1:=s;
-while pos(' ',s1)<>0 do
+while (pos(' ',s1)<>0)or  (pos(',',s1)<>0) or (pos('.',s1)<>0) or (pos('-',s1)<>0) or (pos('!',s1)<>0) or (pos('?',s1)<>0)  do
 begin
+Delete(s1, Pos(',',s1), 1);
+Delete(s1, Pos('.',s1), 1);
+Delete(s1, Pos('!',s1), 1);
+Delete(s1, Pos('?',s1), 1);
+Delete(s1, Pos('-',s1), 1);
 Delete(s1, Pos(' ',s1), 1);
 end;
 Probel:=s1;
