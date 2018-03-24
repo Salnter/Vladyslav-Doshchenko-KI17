@@ -1,0 +1,35 @@
+unit golos;
+interface
+  var
+  s1: string;
+  function Semonenko ( a:string):byte;
+
+implementation
+function Semonenko ( a:string):byte;
+var
+s: string;
+m:byte;
+begin
+  s:=a;
+  if pos('йнкхлюкхлрхбоепьеярюбмюмнцх-',s)<>0 then
+  m:=1
+  else if pos ('ъйюфрнпюд╡ярэлюреп╡аскю!',s)<>0 then
+  m:=1
+  else if pos('б'+#179+'дрхун╞йнкхяйхднонпнцю',s)<>0 then
+  m:=1
+  else if pos ('бнмюреаегюпсйсопнбекю.',s)<>0 then
+  m:=1
+  else if pos('бнмюопха'+#179+'цкюярнлкемюгпнанрх,',s)<>0 then
+  m:=1
+  else if pos (#179+',лнфе,янм╞инв'+#179+'гюлхйюб',s)<>0 then
+  m:=1
+  else if pos('юднлю-мнбхийкно'+#179+'ррюрспанрх,',s)<>0 then
+  m:=1
+  else if pos (#179+'днбцюмхгйюмеонвюрхуяопюб',s)<>0 then
+  m:=1
+  else m:=0;
+  Semonenko:=m;
+end;
+
+end.
+

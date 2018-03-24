@@ -1,0 +1,8 @@
+object Galery_2: TGalery_2
+  Left = 626
+  Height = 240
+  Top = 236
+  Width = 320
+  Caption = 'Negative'
+  LCLVersion = '1.2.4.0'
+end

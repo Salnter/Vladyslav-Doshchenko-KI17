@@ -1,0 +1,27 @@
+object Galery: TGalery
+  Left = 549
+  Height = 116
+  Top = 266
+  Width = 407
+  Caption = 'Positive'
+  ClientHeight = 116
+  ClientWidth = 407
+  Color = 9671571
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '1.2.4.0'
+  object Label1: TLabel
+    Left = 8
+    Height = 17
+    Top = 40
+    Width = 382
+    Caption = ': Вітаємо це рядок з вірша Василя Симоненка «Вклонися їй»!'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+end

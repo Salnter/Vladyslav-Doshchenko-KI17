@@ -1,0 +1,26 @@
+unit form5_negative;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs;
+
+type
+  TGalery_2 = class(TForm)
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  Galery_2: TGalery_2;
+
+implementation
+
+{$R *.lfm}
+
+end.
+

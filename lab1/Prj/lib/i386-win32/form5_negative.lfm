@@ -1,0 +1,27 @@
+object Galery_2: TGalery_2
+  Left = 626
+  Height = 116
+  Top = 236
+  Width = 407
+  Caption = 'Negative'
+  ClientHeight = 116
+  ClientWidth = 407
+  Color = 9671571
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '1.2.4.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 17
+    Top = 48
+    Width = 386
+    Caption = 'Цього рядка немає у віршу Василя Симоненка «Вклонися їй» '
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+end

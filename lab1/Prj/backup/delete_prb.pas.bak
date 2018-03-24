@@ -1,0 +1,60 @@
+unit Delete_prb;
+interface
+var
+s:string;
+function Probel(var s:string):string;
+function upper (var s:string):string;
+implementation
+function Probel (var s:string):string;
+var
+s1:string;
+begin
+s1:=s;
+while pos(' ',s1)<>0 do
+begin
+Delete(s1, Pos(' ',s1), 1);
+end;
+Probel:=s1;
+end;
+function upper (var s:string):string;
+var
+  u: array [128..143] of char;
+  p: array [224..239] of char;
+  m,i,e:char;
+  i1:word;
+  s2:string;
+  v,b,n,z:byte;
+  begin
+    s2:=s;
+    for i1:=1 to length(s2)do
+    begin
+    if (s2[i1]<#224) then
+    begin
+    v:=127;
+    for i:=#160 to s2[i1] do
+    v:=v+1;
+    b:=127;
+     for i:=#128 to #143 do
+    begin
+     u[b+1]:=i;
+     b:=b+1;
+    end;
+    end
+    else if (s2[i1]>#223) then
+    begin
+    n:=143;
+    for i:=#224 to s2[i1]do
+    n:=n+1;
+     z:=143;
+       for e:=#144 to #159 do
+    begin
+     u[z+1]:=e;
+     z:=z+1;
+     end;
+  end;
+    upper:=s2;
+  end;
+
+  end;
+end.
+

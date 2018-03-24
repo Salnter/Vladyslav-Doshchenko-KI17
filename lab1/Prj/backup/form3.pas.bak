@@ -1,0 +1,24 @@
+unit Formi;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs;
+
+type
+  TFormi = class(TForm)
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  Formi: TFormi;
+
+implementation
+
+end.
+

@@ -1,0 +1,8 @@
+object Formi: TFormi
+  Left = 705
+  Height = 106
+  Top = 193
+  Width = 384
+  Caption = 'Formi'
+  LCLVersion = '1.2.4.0'
+end
