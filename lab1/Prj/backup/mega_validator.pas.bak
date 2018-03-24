@@ -3,6 +3,7 @@ interface
  function valid1 (var a:string):byte;
  function valid2 (var b:string):byte;
  function valid3 (var c:string):byte;
+ function valid4 (var c:string):byte;
 implementation
 function valid1 (var a:string):byte;
 var
@@ -24,8 +25,7 @@ k,i,q,w,p:integer;
 t:byte;
 begin
   s:=b;
-  if  (pos(#44,s)=0) then t:=1;
-   if (pos(#44,s)>1) then
+   if pos(#44,s)>1 then
   begin
     k:=1;
     for i:=k to length(s) do
@@ -36,7 +36,7 @@ begin
     end;
   end else t:=0;
   if q= 1 then t:=1
-  else t:=0;
+  else if  pos(#44,s)=0 then t:=1 else t:=0;
   valid2:=t;
   end;
  function valid3 (var c:string):byte;
@@ -46,13 +46,12 @@ k,i,q,w,p:integer;
 t:byte;
 begin
 s:=c;
-  if (pos('-',s)=0) or (pos('+',s)=0) then t:=1;
-if (pos('-',s)=1) or (pos('+',s)=1) then
+if (pos('-',s)=1) then
   begin
     k:=1;
     for i:=k to length(s) do
     begin
-      if (s[i] = '-') or (s[i] = '+') then
+      if s[i] = '-' then
       w:=w+1;
       k:=k+1;
     end;
@@ -60,7 +59,30 @@ if (pos('-',s)=1) or (pos('+',s)=1) then
   else t:=0;
   if w= 1 then t:=1
   else t:=0;
+  if pos('-',s)=0 then t:=1;
   valid3:=t;
+  end;
+ function valid4 (var c:string):byte;
+var
+s:string;
+k,i,q,w,p:integer;
+t:byte;
+begin
+  if pos('+',s)=1 then
+  begin
+    k:=1;
+    for i:=k to length(s) do
+    begin
+      if s[i] = '+' then
+      w:=w+1;
+      k:=k+1;
+    end;
+  end
+  else t:=0;
+  if w= 1 then t:=1
+  else t:=0;
+  if pos('+',s)=0 then t:=1;
+  valid4:=t;
 end;
 
 end.

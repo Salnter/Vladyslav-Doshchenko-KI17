@@ -1,0 +1,24 @@
+unit kote;
+
+interface
+uses mega_validator;
+function valid5(var d:string):real;
+
+implementation
+function valid5(var d:string):real;
+var
+s:string;
+t:real;
+begin
+  s:=d;
+  t:=0;
+  if valid1(s) = 1 then t:=t+1 else t:=t;
+   if valid2(s) = 1 then t:=t+1 else t:=t;
+    if valid3(s) = 1 then t:=t+1 else t:=t;
+     if valid4(s) = 1 then t:=t+1 else t:=t;
+     valid5:=t;
+
+end;
+
+end.
+

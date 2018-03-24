@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, unit2,Mega_Validator
+  Forms, Task2, validator
   { you can add units after this };
 
 {$R *.res}
@@ -15,7 +15,7 @@ uses
 begin
   RequireDerivedFormResource := True;
   Application.Initialize;
-  Application.CreateForm(TNumber, Number);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
 

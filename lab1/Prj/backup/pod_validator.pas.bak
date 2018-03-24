@@ -1,0 +1,20 @@
+unit Pod_validator;
+uses mega_validator;
+interface
+function valid4(var d:string):byte;
+
+implementation
+function valid4(var d:string):byte;
+var
+s:string;
+t:byte;
+begin
+s:=d;
+while (pos('.',s)<>0) do
+s[pos('.',s)]:=#44;
+if (valid1(s) = 1) and (valid2(s) =1) and (valid3(s)=1) then t:=1 else t:=0;
+valid4:=t;
+end;
+
+end.
+

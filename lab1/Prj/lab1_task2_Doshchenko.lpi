@@ -33,30 +33,24 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="3">
       <Unit0>
         <Filename Value="lab1_task2_Doshchenko.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="lab1_task2_Doshchenko"/>
       </Unit0>
       <Unit1>
-        <Filename Value="unit2.pas"/>
+        <Filename Value="task2.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Number"/>
-        <HasResources Value="True"/>
+        <ComponentName Value="Form1"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="unit2"/>
+        <UnitName Value="Task2"/>
       </Unit1>
       <Unit2>
         <Filename Value="validator.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="validator"/>
       </Unit2>
-      <Unit3>
-        <Filename Value="mega_validator.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="Mega_Validator"/>
-      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

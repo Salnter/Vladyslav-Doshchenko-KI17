@@ -1,64 +1,122 @@
 unit validator;
 
 interface
- function valid (var a:string):byte;
-
+ function Data1(var x,y,z: string):byte;
+ function Data2(z: real):byte;
 
 implementation
-function valid (var a:string):byte;
-var
-s:string;
-k,i,q,w,p:integer;
-t:byte;
-begin
-  s:=a;
-  k:=1;
-  for i:=k to length(s) do
-  if s[i] in ['1','2','3','4','5','6','7','8','9','0','-','+',',','.'] then t:=1
-  else t:=0;
-  if pos(',',s)>1 then
+  function Data1(var x,y,z: string):byte;
+  var i,d,l,t:byte;
+    g,p:set of char ;
   begin
-    k:=1;
-    for i:=k to length(s) do
+   g:=['0','1','2','3','4','5','6','7','8','9'];
+   p:=[',','-','+'];
+    data1:=1;
+     d:=1;
+     t:=1;
+   if (x='')or(y='')or(z='') then
+   begin
+    data1:=0 ;
+     exit;
+      end;
+   while (pos('.',x)<>0) do
+       x[pos('.',x)]:=',';
+   while (pos('.',y)<>0) do
+       y[pos('.',y)]:=',';
+   while (pos('.',z)<>0) do
+       z[pos('.',z)]:=',';
+       for i:=1 to length(x) do
     begin
-      if s[i] = ',' then
-      p:=p+1;
-      k:=k+1;
-    end;
-  end
-  else t:=0;
-  if p= 1 then t:=1
-  else t:=0;
-  if pos('.',s)>1 then
-  begin
-    k:=1;
-    for i:=k to length(s) do
+      if not(x[i] in g)and not(x[i] in p) then
+       begin
+      data1:=0;
+      exit;
+      end;
+      if ((x[i] in p)and ((d=0)or (t=0)or (l=0))) or ((i<>1) and (x[i]='-'))then
+      begin
+        data1:=0;
+        exit;
+        end
+      else
+      begin
+      if (x[i]=',') then
+       begin
+       d:=0;
+       end;
+       if(x[i]='-') then
+           t:=0;
+        if (x[i]='+') then
+       begin
+       l:=0;
+       end;
+         end;
+        end;
+       d:=1;
+        t:=1;
+        l:=1;
+   for i:=1 to length(y) do
+   begin
+     if not(y[i] in g)and not(y[i] in p) then
+      begin
+     data1:=0;
+     exit;
+     end;
+     if ((y[i] in p)and ((d=0)or (t=0) or (l=0))) or ((i<>1) and (y[i]='-'))then
+      begin
+        data1:=0;
+        exit;
+        end
+      else
+      begin
+      if (y[i]=',')  then
+       begin
+       d:=0;
+       end;
+       if(y[i]='-') then
+           t:=0;
+       if (x[i]='+') then
+       begin
+       l:=0;
+       end;
+                 end;
+        end;
+          d:=1;
+          t:=1;
+          l:=1;
+         for i:=1 to length(z) do
     begin
-      if s[i] = '.' then
-      q:=q+1;
-      k:=k+1;
-    end;
-  end;
-  if q= 1 then
-  begin
-    t:=1;
-    s[pos('.',s)]:=',';
-  end
-  else t:=0;
-  if (pos('-',s)=1) or (pos('+',s)=1) then
-  begin
-    k:=1;
-    for i:=k to length(s) do
-    begin
-      if (s[i] = '-') or (s[i] = '+') then
-      w:=w+1;
-      k:=k+1;
-    end;
-  end
-  else t:=0;
-  if w= 1 then t:=1
-  else t:=0;
-end;
+      if not(z[i] in g)and not(z[i] in p) then
+       begin
+      data1:=0;
+      exit;
+      end;
+     if ((z[i] in p)and ((d=0)or (t=0) or (l=0))) or ((i<>1) and (z[i]='-'))then
+      begin
+        data1:=0;
+        exit;
+        end
+      else
+      begin
+      if (z[i]=',') then
+       begin
+       d:=0;
+       end;
+       if(z[i]='-') then
+           t:=0;
+       if (x[i]='+') then
+       begin
+       l:=0;
+       end;
+                 end;
+        end;
+       end;
 
-end.
+     function data2(z: real):byte;
+  begin
+    data2:=1;
+   if (z<=0) then
+      data2:=0;
+       end;
+  end.
+
 

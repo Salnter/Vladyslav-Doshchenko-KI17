@@ -1,0 +1,50 @@
+object Form1: TForm1
+  Left = 565
+  Height = 240
+  Top = 152
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '1.2.4.0'
+  object Button1: TButton
+    Left = 197
+    Height = 25
+    Top = 166
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 68
+    Height = 23
+    Top = 53
+    Width = 68
+    TabOrder = 1
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 65
+    Height = 23
+    Top = 109
+    Width = 80
+    TabOrder = 2
+    Text = 'Edit2'
+  end
+  object Edit3: TEdit
+    Left = 71
+    Height = 23
+    Top = 178
+    Width = 80
+    TabOrder = 3
+    Text = 'Edit3'
+  end
+  object Label1: TLabel
+    Left = 228
+    Height = 1
+    Top = 65
+    Width = 1
+    ParentColor = False
+  end
+end
