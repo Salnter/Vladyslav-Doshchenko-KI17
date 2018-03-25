@@ -47,6 +47,21 @@ var x,y,z,q,q1,p,n:real;
    s1:=Edit1.Text;
    s2:=Edit2.Text;
   s3:=Edit3.Text;
+  if length(s1)>10 then
+    begin
+   Label1.Caption:='Занадто велике число!';
+   exit;
+   end;
+  if length(s2)>10 then
+    begin
+   Label1.Caption:='Занадто велике число!';
+   exit;
+   end;
+  if length(s3)>10 then
+    begin
+   Label1.Caption:='Занадто велике число!';
+   exit;
+   end;
    i:=data1(s1,s2,s3);
   if (i=0) then
    begin
@@ -59,12 +74,12 @@ var x,y,z,q,q1,p,n:real;
  i:= data2(z);
   if (i=0) then
    begin
-   Label1.Caption:='Некоректно введені дані!';
+   Label1.Caption:='Змінна z не може дорівнювати нулю!';
    exit;
    end;
   q:= ln(abs(sin(z)));
    p:= (1/7*power(x,y))-(sqrt(abs(y-z)));
-   n:=(10*3.14*power(z,4));
+   n:=(10*pi*power(z,4));
    q1:=q+(p/n);
   t:=floattostr(q1);
    Label1.Caption:='Q = '+t;

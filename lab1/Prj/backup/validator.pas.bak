@@ -6,11 +6,11 @@ interface
 
 implementation
   function Data1(var x,y,z: string):byte;
-  var i,d,l,t:byte;
+  var i,d,t:byte;
     g,p:set of char ;
   begin
    g:=['0','1','2','3','4','5','6','7','8','9'];
-   p:=[',','-','+'];
+   p:=[',','-'];
     data1:=1;
      d:=1;
      t:=1;
@@ -32,7 +32,7 @@ implementation
       data1:=0;
       exit;
       end;
-      if ((x[i] in p)and ((d=0)or (t=0)or (l=0))) or ((i<>1) and (x[i]='-'))then
+      if ((x[i] in p)and ((d=0)or (t=0))) or ((i<>1) and (x[i]='-'))then
       begin
         data1:=0;
         exit;
@@ -45,15 +45,11 @@ implementation
        end;
        if(x[i]='-') then
            t:=0;
-        if (x[i]='+') then
-       begin
-       l:=0;
-       end;
          end;
         end;
        d:=1;
         t:=1;
-        l:=1;
+
    for i:=1 to length(y) do
    begin
      if not(y[i] in g)and not(y[i] in p) then
@@ -61,7 +57,7 @@ implementation
      data1:=0;
      exit;
      end;
-     if ((y[i] in p)and ((d=0)or (t=0) or (l=0))) or ((i<>1) and (y[i]='-'))then
+     if ((y[i] in p)and ((d=0)or (t=0) )) or ((i<>1) and (y[i]='-'))then
       begin
         data1:=0;
         exit;
@@ -82,7 +78,7 @@ implementation
         end;
           d:=1;
           t:=1;
-          l:=1;
+
          for i:=1 to length(z) do
     begin
       if not(z[i] in g)and not(z[i] in p) then
@@ -90,7 +86,7 @@ implementation
       data1:=0;
       exit;
       end;
-     if ((z[i] in p)and ((d=0)or (t=0) or (l=0))) or ((i<>1) and (z[i]='-'))then
+     if ((z[i] in p)and ((d=0)or (t=0) )) or ((i<>1) and (z[i]='-'))then
       begin
         data1:=0;
         exit;
@@ -103,10 +99,6 @@ implementation
        end;
        if(z[i]='-') then
            t:=0;
-       if (x[i]='+') then
-       begin
-       l:=0;
-       end;
                  end;
         end;
        end;

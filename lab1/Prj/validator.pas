@@ -6,7 +6,7 @@ interface
 
 implementation
   function Data1(var x,y,z: string):byte;
-  var i,d,l,t:byte;
+  var i,d,t:byte;
     g,p:set of char ;
   begin
    g:=['0','1','2','3','4','5','6','7','8','9'];
@@ -45,10 +45,6 @@ implementation
        end;
        if(x[i]='-') then
            t:=0;
-        if (x[i]='+') then
-       begin
-       l:=0;
-       end;
          end;
         end;
        d:=1;
@@ -74,10 +70,6 @@ implementation
        end;
        if(y[i]='-') then
            t:=0;
-       if (x[i]='+') then
-       begin
-       l:=0;
-       end;
                  end;
         end;
           d:=1;
