@@ -32,7 +32,7 @@ implementation
       data1:=0;
       exit;
       end;
-      if ((x[i] in p)and ((d=0)or (t=0))) or ((i<>1) and (x[i]='-'))then
+      if ((x[i] in p)and (((x[i]=',')and (d=0)) or ((x[i]='-')and(t=0))) or ((i<>1) and (x[i]='-')))then
       begin
         data1:=0;
         exit;
@@ -40,10 +40,8 @@ implementation
       else
       begin
       if (x[i]=',') then
-       begin
-       d:=0;
-       end;
-       if(x[i]='-') then
+        d:=0;
+        if(x[i]='-') then
            t:=0;
          end;
         end;
@@ -57,7 +55,7 @@ implementation
      data1:=0;
      exit;
      end;
-     if ((y[i] in p)and ((d=0)or (t=0) )) or ((i<>1) and (y[i]='-'))then
+     if ((y[i] in p)and (((y[i]=',')and (d=0)) or ((y[i]='-')and(t=0))) or ((i<>1) and (y[i]='-')))then
       begin
         data1:=0;
         exit;
@@ -82,7 +80,7 @@ implementation
       data1:=0;
       exit;
       end;
-     if ((z[i] in p)and ((d=0)or (t=0) )) or ((i<>1) and (z[i]='-'))then
+   if ((z[i] in p)and (((z[i]=',')and (d=0)) or ((z[i]='-')and(t=0))) or ((i<>1) and (z[i]='-')))then
       begin
         data1:=0;
         exit;
@@ -102,7 +100,7 @@ implementation
      function data2(z: real):byte;
   begin
     data2:=1;
-   if (z<=0) then
+   if (z=0) then
       data2:=0;
        end;
   end.

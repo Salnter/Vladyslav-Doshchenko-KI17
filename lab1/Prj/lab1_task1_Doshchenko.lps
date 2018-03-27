@@ -25,8 +25,8 @@
         <UnitName Value="Unit1"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="72"/>
-        <CursorPos X="27" Y="84"/>
+        <TopLine Value="71"/>
+        <CursorPos X="17" Y="76"/>
         <UsageCount Value="30"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -46,6 +46,7 @@
         <Filename Value="delete_prb.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Delete_prb"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="5"/>
@@ -108,7 +109,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="form5_negative"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
