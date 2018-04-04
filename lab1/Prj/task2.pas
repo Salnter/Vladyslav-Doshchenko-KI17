@@ -94,31 +94,31 @@ var x,y,z,p,q,n,u,o:real;
    end;
   if (ln(abs(sin(z)))>power(10,38))then
    begin
-   Label1.Caption:='Обчислення неможливі!';
+   Label1.Caption:='Обчислення неможливі, введіть меньші значення!';
    exit;
    end;
    p:=ln(abs(sin(z)));
    if ((1/7)*power(x,y))>power(10,38)then
    begin
-   Label1.Caption:='Обчислення неможливі!';
+   Label1.Caption:='Обчислення неможливі, введіть меньші значення!';
    exit;
    end;
    q:=(1/7*power(x,y))-(sqrt(abs(y-z)));
     if ((sqrt(abs(y-z))))>power(10,38)then
    begin
-   Label1.Caption:='Обчислення неможливі!';
+   Label1.Caption:='Обчислення неможливі, введіть меньші значення!';
    exit;
    end;
    u:=(sqrt(abs(y-z)));
    if (10*pi*power(z,4))>power(10,38)then
    begin
-   Label1.Caption:='Обчислення неможливі!';
+   Label1.Caption:='Обчислення неможливі, введіть меньші значення!';
    exit;
    end;
    n:=10*pi*power(z,4);
    if (p+((q-u)/n))>power(4.54728408833987,2985)then
    begin
-   Label1.Caption:='Обчислення неможливі!';
+   Label1.Caption:='Обчислення неможливі, введіть меньші значення!';
    exit;
    end;
   Label1.Caption:= FloatToStr(p+((q-u)/n));

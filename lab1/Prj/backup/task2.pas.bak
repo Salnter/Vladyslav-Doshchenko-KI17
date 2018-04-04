@@ -98,12 +98,12 @@ var x,y,z,p,q,n,u,o:real;
    exit;
    end;
    p:=ln(abs(sin(z)));
-   if ((1/7)*(power(x,y)):0)>power(10,38)then
+   if ((1/7)*power(x,y))>power(10,38)then
    begin
    Label1.Caption:='Обчислення неможливі!';
    exit;
    end;
-   q:=(1/7*(power(x,y):0))-(sqrt(abs(y-z)));
+   q:=(1/7*power(x,y))-(sqrt(abs(y-z)));
     if ((sqrt(abs(y-z))))>power(10,38)then
    begin
    Label1.Caption:='Обчислення неможливі!';
