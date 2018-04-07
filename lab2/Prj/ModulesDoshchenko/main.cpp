@@ -107,27 +107,27 @@ short Check (char x[],char y[], char z[])
     const double pi = 3.1415926535897932384626433832795;
     if ((log(abs(sin(z))))>pow(10,38)){
         cout<<"Обчислення неможливi,введiть менше значення!";
-        exit(0);
+
     }
     else p=log(abs(sin(z)));
    if (((1/7*pow(x,y))-(sqrt(abs(y-z)))) >pow(10,38)){
         cout<<"Обчислення неможливi,введiть менше значення!";
-        exit(0);
+
     }
    else  q=(1/7*pow(x,y))-(sqrt(abs(y-z)));
     if((sqrt(abs(y-z))) >pow(10,38)){
         cout<<"Обчислення неможливi,введiть менше значення!";
-        exit(0);
+
     }
     else f =(sqrt(abs(y-z)));
     if ((10*pi*pow(z,4)) >pow(10,38)){
         cout<<"Обчислення неможливi,введiть менше значення!";
-        exit(0);
+
     }
    else n =10*pi*pow(z,4);
     if ((p+((q-f)/n)) >pow(4.54728408833987,2985)){
         cout<<"Обчислення неможливi,введiть менше значення!";
-        exit(0);
+
     }
    else k = (p+((q-f)/n));
    return k;
@@ -141,7 +141,6 @@ double s_calculation (double x, double y, double z)
     if (abs(((((sqrt(1+x)-3*cos(x))/(log(x*x)+3*sin(pi*x)))+((sqrt(pow(z,3)+2))*(sqrt(pow(z,3)+2))))>pow(10,38))))
     {
        cout<<"Обчислення неможливi,введiть менше значення!";
-       exit(0);
     }
     else k =(((sqrt(1+x)-3*cos(x))/(log(x*x)+3*sin(pi*x)))+((sqrt(pow(z,3)+2))*(sqrt(pow(z,3)+2))));
     return k;

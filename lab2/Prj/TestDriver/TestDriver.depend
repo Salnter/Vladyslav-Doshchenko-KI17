@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1523108386 source:d:\Универ\labs2\vladyslav-doshchenko-ki17\lab2\prj\testdriver\main.cpp
+	<iostream>
+	"ModulesDoshchenko.h"
+
