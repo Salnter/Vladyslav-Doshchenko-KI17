@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1523101965 source:d:\Универ\labs2\vladyslav-doshchenko-ki17\lab2\prj\modulesdoshchenko\main.cpp
+	<iostream>
+	<cstring>
+	<cmath>
+	<clocale>
+	<cstdlib>
+
