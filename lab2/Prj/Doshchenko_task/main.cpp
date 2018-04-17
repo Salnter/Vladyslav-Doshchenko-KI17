@@ -10,7 +10,7 @@
 
 using namespace std;
 
-bool Logic(double a, double b){
+bool Logic(char a, char b){
     bool c = false;
     if ((a+7) < (abs(b+5))) {
         c = true;}
@@ -24,27 +24,22 @@ int main()
     setlocale(LC_CTYPE,"ukr");
 	cout << "Vladislav Doshchenko (c)" << endl;
 	int sw;
-	cout << "Натиснувши 1 ви отримаєте логiчний результат:  a+7<|b-5|!" << endl << "Натиснувши 2 ви отримаєте розрахунки попереднiх задач!" << endl;
+	while(sw!=0){
+	cout << "Натиснувши 1 ви отримаєте логiчний результат:  a+7<|b-5|" << endl << "Натиснувши 2 ви отримаєте розрахунки попереднiх задач!" << endl<<"Натиснувши iнший символ програма завершиться!"<<endl;;
 	cin >> sw;
 	switch (sw) {
 	    case 1: {
-	double a,b;
+	string a,b;
 	bool c;
 	cout << "Введiть перший параметр\n";
-	while (!(cin >> a)){
-        cout << "Некоректнi данi!\n";
-        cin.clear();
-        fflush(stdin);}
+	cin>>a;
 	cout << "Введiть другий переметр\n";
-	while (!(cin >> b)){
-        cout << "Некоректнi данi!\n";
-        cin.clear();
-        fflush(stdin);}
+	cin>>b;
 	cout << "Логiчний результат: ";
-	if (Logic(a,b)==true){
+	if (Logic(a[0],b[0])==true){
             cout << 1 << endl;
         }
-        if (Logic(a,b)==false){
+        if (Logic(a[0],b[0])==false){
             cout << 0 << endl;
         }
         break;}
@@ -78,17 +73,17 @@ int main()
         }
         cout<<"Q= " << q_calculation(x,y,z)<<endl;
         cout<<"S= " << fixed<<(s_calculation(x,y,z))<<endl;
-        int a, b, c,l;
+        int s,c,l;
         cout << "Надалi будуть використовуватися цiлi значення" << endl;
-        c = round(q_calculation(x,y,z));
-        l = round(s_calculation(x,y,z));
-        a = int(c);
-        b = int(l);
+        c = round(x);
+        l = round(y);
+        s = round(z);
         cout << "Числа у вiсiмковiй системi числення:" << endl;
-        cout << std::oct << "Q = " << a << " S = " << b << endl;
+        cout << std::oct << "X = " << c<<" " << " Y = " << l <<" "<<"Z = "<<s<<" "<< endl;
         cout << "Числа у шiстнадцятковiй системi числення:" << endl;
-        cout << std::hex << "Q  = " << a << " S = " << b << endl;
+        cout << std::hex << "X = " << c <<" "<< " Y = " << l<<" " <<"Z = "<<s<<" "<< endl;
         break;}
+	}
     }
 system("pause");
 }
